@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --main-bg: #1B1D1F;
+    --body-bg: #121316;
+    --body-text: #6F757C;
+    --price-bg: #BEE3CC;
+    --heading-text: #fdf4e6;
+    --tag-bg: #F6C768;
+    --sold-out-text: #f26d5d;
+
+    --font-family: "DM Sans", sans-serif;
+    --bg: url("../assets/bg-cafe.jpg")
+}
+
+
+body {
+    font-family: var(--font-family);
+    color: var(--body-text-clr);
+
+    background-color: var(--body-bg);
+    min-height: 100vh;
+    min-width: 100vw;
+    padding-block-start: 6.25rem;
+    overflow-x: hidden;
+    padding-bottom: 10px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+
+    display: inline-block;
+
+    width: 100%;
+    height: 18.75rem;
+
+    background-image: var(--bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
